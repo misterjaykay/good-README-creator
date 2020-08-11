@@ -1,12 +1,13 @@
-var inquirer = require("inquirer");
-var generate = require("./generateMarkdown.js");
-var fs = require("fs");
+const inquirer = require("inquirer");
+const path = require("path");
+const generateMarkdown = require("./generateMarkdown.js");
+const fs = require("fs");
 
 
 
 
 // array of questions for user
-var questions = [
+const questions = [
     {
         type: "input",
         message: "Please enter your Github username.",
@@ -51,20 +52,23 @@ var questions = [
         type: "input",
         message: "Please describe how user can contribute to the repo.",
         name: "repocon"
+    },
+    {
+        type: "list",
+        message: "license here", // add license question
+        choices: ["MIT", "ISC", "Apache 2.0", "None"], // list of licenses
+        name: "licence"
     }
 
 ]
 
-    // console.log(questions);
 
-    // .then(function(response) {
-    // console.log(response);
-    // });
 
 // function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(response.name)
 
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data) 
+    
 }
 
 // function to initialize program
@@ -73,7 +77,8 @@ function init() {
     .prompt(questions)
     .then(function(response) {
     console.log(response);
-    });
+    writeToFile("README.md", generateMarkdown({...response}));
+    });    
 }
 
 // function call to initialize program
