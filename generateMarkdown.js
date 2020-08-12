@@ -1,5 +1,8 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
+  console.log(data);
+  var userLicenses = renderLicense(data.license);
+
   return `# ${data.title}
 ---
   ## Description
@@ -30,7 +33,7 @@ function generateMarkdown(data) {
   <pre> # NPM
   ${data.test} </pre>
 
----
+--- 
   ## Usage
   ${data.usage}
 
@@ -53,10 +56,19 @@ function generateMarkdown(data) {
 ---
   ## Licenses
   ${data.license}
-  * [![License: Apache2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-  * [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  * [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+  ${userLicenses}
 `;
+}
+
+
+function renderLicense(licenses) {
+  console.log(licenses);
+  var licenseString = "";
+  for (var i = 0; i < licenses.length; i++) {
+    licenseString = licenseString + `* [![License: ${licenses[i]}](https://img.shields.io/badge/License-${licenses[i]}-green.svg)](https://opensource.org/licenses/${licenses[i]})` + '\n';
+    console.log(licenseString);
+  }
+  return licenseString;
 }
 
 module.exports = generateMarkdown;
