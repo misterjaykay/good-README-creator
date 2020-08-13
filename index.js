@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const path = require("path");
-const generateMarkdown = require("./generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 const fs = require("fs");
 
 
@@ -22,7 +22,7 @@ const questions = [
     },
     {
         type: "input",
-        message: "Please enter your repo name.",
+        message: "Please enter your repository name.",
         name: "repo",
         default: "Your github repo name"
     },
@@ -53,7 +53,8 @@ const questions = [
     {
         type: "input",
         message: "What is the usage for this project?",
-        name: "usage"
+        name: "usage",
+        default: "Install npm packages using NPM"
     },
     {
         type: "input",
@@ -74,7 +75,16 @@ const questions = [
 // function to write README file
 function writeToFile(fileName, data) {
 
-    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+    ///// for using writeFileSync without callback
+    // return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+    fs.writeFile(path.join(process.cwd(), fileName), data, function(err) {
+
+        if (err) {
+            return console.log(err);
+        }
+
+        return console.log("Successfully Created");
+    });
     
 }
 

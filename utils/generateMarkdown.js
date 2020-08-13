@@ -1,10 +1,7 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  console.log(data);
+
   var userLicenses = renderLicense(data.license);
- 
-  // var userLicenses = renderLicense(licenseMIT, licenseISC, licenseApache);
-  console.log('what is this?' + userLicenses + 'end');
 
   return `# ${data.title}
 ---
@@ -41,7 +38,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
 --- 
-  ## Contribute to ${data.title}
+  ## Contribute to "${data.title}"
 
   ### How to contribute
 
@@ -51,10 +48,10 @@ function generateMarkdown(data) {
   ## Questions
 
   ### Github Profile
-  [Repo](https://github.com/${data.github})
+  [Visit My Repo](https://github.com/${data.github})
 
   ### E-mail
-  Email at ${data.email}
+  Please Email at ${data.email}
 
 ---
   ## Licenses
@@ -65,7 +62,6 @@ function generateMarkdown(data) {
 
 
 function renderLicense(licenses) {
-  console.log('this is users input' + licenses);
 
   ///// Looping to get the licenses (Option 1)
   // var licenseString = "";

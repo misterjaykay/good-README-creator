@@ -1,7 +1,7 @@
-# Ex. Sample Title
+# Good README Creator
 ---
   ## Description
-  > Ex. This is sample description for my project.
+  > This app creates a readme file to users to use on their own projects.
 
 ---
   ## Getting Started
@@ -21,7 +21,7 @@
   npm install </pre>
 
   ### Clone
-  > https://github.com/Your github username/Your github repo name
+  > https://github.com/misterjaykay/good-readme-creator
 
 ---
   ## Test
@@ -30,27 +30,26 @@
 
 --- 
   ## Usage
-  
+  uses to create a well written readme file for their own use.
 
 --- 
-  ## Contribute to Ex. Sample Title
+  ## Contribute to "Good README Creator"
 
   ### How to contribute
 
-  
+  Please fork the repository.
 
 ---
   ## Questions
 
   ### Github Profile
-  [Repo](https://github.com/Your github username)
+  [Visit My Repo](https://github.com/misterjaykay)
 
   ### E-mail
-  Email at Your e-mail
+  Please Email at misterjaykay@gmail.com
 
 ---
   ## Licenses
-  MIT,Apache 2.0
+  MIT
   * [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-* [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
