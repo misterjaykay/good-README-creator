@@ -21,7 +21,7 @@
   npm install </pre>
 
   ### Clone
-  > https://github.com/Your github username/Your github repo name
+  > https://github.com/ /Your github repo name
 
 ---
   ## Test
@@ -43,14 +43,14 @@
   ## Questions
 
   ### Github Profile
-  [Repo](https://github.com/Your github username)
+  [Repo](https://github.com/ )
 
   ### E-mail
   Email at Your e-mail
 
 ---
   ## Licenses
-  MIT,ISC
-  * [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-* [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+  
+  * [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+* [![License: Apache 2.0](https://img.shields.io/badge/License-Apache 2.0-green.svg)](https://opensource.org/licenses/Apache 2.0)
 

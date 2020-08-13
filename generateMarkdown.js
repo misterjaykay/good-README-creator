@@ -2,6 +2,9 @@
 function generateMarkdown(data) {
   console.log(data);
   var userLicenses = renderLicense(data.license);
+ 
+  // var userLicenses = renderLicense(licenseMIT, licenseISC, licenseApache);
+  console.log('what is this?' + userLicenses);
 
   return `# ${data.title}
 ---
@@ -62,13 +65,47 @@ function generateMarkdown(data) {
 
 
 function renderLicense(licenses) {
-  console.log(licenses);
+  console.log('this is users input' + licenses);
+
+  /// Looping to get the licenses
   var licenseString = "";
   for (var i = 0; i < licenses.length; i++) {
     licenseString = licenseString + `* [![License: ${licenses[i]}](https://img.shields.io/badge/License-${licenses[i]}-green.svg)](https://opensource.org/licenses/${licenses[i]})` + '\n';
     console.log(licenseString);
   }
   return licenseString;
+
+  // var licenseMIT = '';
+  // var licenseISC = '';
+  // var licenseApache = '';
+
+  // licenses.forEach(function(data) {
+  //   if (data == "MIT") {
+  //     console.log("MIT is here");
+  //     licenseMIT = licenseMIT + `* [![License: ${data}](https://img.shields.io/badge/License-${data}-green.svg)](https://opensource.org/licenses/${data})` + '\n';  
+  //     console.log(data);
+  //     console.log('this is mit license link' + licenseMIT);
+  //     return licenseMIT;
+  //   }
+    
+  //   else if (data == "ISC") {
+  //     console.log("ISC is here");
+  //     licenseISC = licenseISC + `* [![License: ${data}](https://img.shields.io/badge/License-${data}-green.svg)](https://opensource.org/licenses/${data})` + '\n';  
+  //     return licenseISC;
+  //   }
+
+  //   else if (data == "Apache 2.0") {
+  //     console.log("Apache 2.0 is here");
+  //     licenseApache = licenseApache + `* [![License: ${data}](https://img.shields.io/badge/License-${data}-green.svg)](https://opensource.org/licenses/${data})` + '\n';  
+  //     return licenseApache;
+  //   }
+
+  //   else {
+  //     return;
+  //   }
+
+  // });
+  
 }
 
 module.exports = generateMarkdown;
