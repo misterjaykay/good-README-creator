@@ -83,46 +83,11 @@ function init() {
     inquirer
     .prompt(questions)
     .then(function(response) {
-    // console.log(response.license);
-
-    // makeBadge(response.license);
 
     writeToFile("README.md", generateMarkdown({...response}));
     });    
 }
 
-// function to make a badges for licenses.
-// function makeBadge(data) {
-//     // console.log(data);
-//     // console.log(typeof data); 
-//     // console.log(JSON.stringify(data));
-//     // put them in a array
-//     const license = data; 
-//     license.forEach(function(answer) {
-//         if (answer == "MIT") {
-//             // console.log("this is MIT");
-//             const MIT = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-//             writeToFile("README.md", generateMarkdown(MIT));
-//             console.log(answer);
-//         }
-//         else if (answer == "ISC") {
-//             console.log("this is ISC");
-//             writeToFile("README.md", generateMarkdown(answer));
-//             console.log(answer);
-//         }
-//         else if (answer == "Apache 2.0") {
-//             console.log("this is Apache 2.0");
-//             writeToFile("README.md", generateMarkdown(answer));
-//             console.log(answer);
-//         }
-//         else {
-//             return;
-//         }
-//     });
-//     // writeToFile("README.md", generateMarkdown(data));
-//     console.log("This function is working");
-    
-// }
 
 // function call to initialize program
 init();
