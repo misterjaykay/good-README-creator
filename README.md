@@ -5,12 +5,12 @@
 
 ---
   ## Getting Started
-  - [Installation](##Installation)
-  - [Contribute](##Contribute)
-  - [Test](##Test)
-  - [Usage](##Usage)
-  - [Questions](##Questions)
-  - [Licenses](##Licenses)
+  - [Installation](#Installation)
+  - [Contribute](#Contribute)
+  - [Test](#Test)
+  - [Usage](#Usage)
+  - [Questions](#Questions)
+  - [Licenses](#Licenses)
 
 ---
   ## Installation
